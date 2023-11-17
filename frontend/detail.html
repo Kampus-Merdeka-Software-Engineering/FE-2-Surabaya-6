@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font poppins cdn link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.5/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!--custom css file link-->
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <title>TROVELAB</title>
+</head>
+<body>
+    <sec class="navigation">
+        <div class="navigation">
+            <div class="box">
+              <a href="index.html">
+
+                <img src="./image/logoo.png" style="width: 70px; height: 70px; padding-top: 10px;">
+              </a>
+            </div>
+            <div class="menu-navigation">
+                <ul>
+                    <li>
+                        <a data-aos="zoom-in-left" data-aos-delay="300"class="active" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a data-aos="zoom-in-left" data-aos-delay="450" href="destinations.html">Destinations</a>
+                    </li>
+                    <li>
+                        <a data-aos="zoom-in-left" data-aos-delay="600" href="Offer.html">Offer</a>
+                    </li>
+                    <li>
+                        <a data-aos="zoom-in-left" data-aos-delay="900"href="logres.html">Sign In</a>
+        
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-bar">
+                <i class="ri-menu-fill" style="color: teal"></i>
+            </div>
+
+            <form data-aos="zoom-in-left" data-aos-delay="300" action="/" class="search-bar">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="ri-search-line"></i></label>
+            </form>
+        </div>
+    </sec>
+    <div class = "card-wrapper">
+        <div class = "card">
+          <!-- card left -->
+          <div class = "product-imgs">
+            <div class = "img-display">
+              <div class = "img-showcase" >
+                <img id="showcase1" src = "${product.image1}" alt = "Product Picture">
+                <img id="showcase2" src = "${product.image2}" alt = "Product Picture">
+                <img id="showcase3" src = "${product.image3}" alt = "Product Picture">
+              </div>
+            </div>
+            <div class = "img-select">
+              <div class = "img-item" >
+                <a href = "#" data-id = "1">
+                  <img id="img1" src = "${product.image1}" alt = "Product Picture">
+                </a>
+              </div>
+              <div class = "img-item" >
+                <a href = "#" data-id = "2">
+                  <img id="img2" src = "${product.image2}" alt = "Product Picture">
+                </a>
+              </div>
+              <div class = "img-item" >
+                <a href = "#" data-id = "3">
+                  <img id="img3" src = "${product.image3}" alt = "Product Picture">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- card right -->
+          <div class = "product-content">
+            <h2 class="popular__card__header" id = "product-title">Judul produk</h2>
+            <a href = "#" class = "product-link">Detail Package</a>
+            <div class = "product-rating">
+              <i class = "fas fa-star"></i>
+              <i class = "fas fa-star"></i>
+              <i class = "fas fa-star"></i>
+              <i class = "fas fa-star"></i>
+              <i class = "fas fa-star-half-alt"></i>
+              <span>4.7(21)</span>
+            </div>
+  
+            <div class = "product-price">
+              <h2 class="btn-book-container" id = "new-price">Price: <span>$249.00</span></h2>
+            </div>
+  
+            <div class="deskripsi" id = "product-detail">
+              <h2>about This Package: </h2>
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
+              <ul>
+                <!-- <li>Color: <span>Black</span></li>
+                <li>Available: <span>in stock</span></li>
+                <li>Category: <span>Shoes</span></li>
+                <li>Shipping Area: <span>All over the world</span></li>
+                <li>Shipping Fee: <span>Free</span></li> -->
+              </ul>
+            </div>
+  
+            <div class = "purchase-info">
+              <span id="totalPerson" >Total Person</span>
+              <input type = "number" min = "0" value = "1">
+              <span>Fill The Date</span>
+              <input type="date" value="" id="date">
+              <!-- <button type="button" class="btn" onclick="buyAndDelete('${productId}')">BUY</button> -->
+              <a href="./invoice.html" class="btn" id="product" onclick="buyAndDelete()">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ <!--footer start--> 
+    <footer>
+    <div class="contact">
+      <div class="contact_info">
+          <div class="first_info">
+              <h4>TROVELAB</h4>
+              <p>Welcome to Trovelab<p>
+              <p>our services and website</p>
+              <p>is your gateway to a world</p>
+              <p>of wonderlust experiences</p>
+              <p>with the most exotic destinations.</p>
+          </div>
+
+          <div class="second_info">
+              <h4>Quick Links</h4>
+              <p><a href="index.html" >Home</a></p>
+              <p><a href="destinations.html" >Destination</a></p>
+              <p><a href="offer.html">Offer</a></p>
+              <p><a href="logres.html">Account</a></p>
+          </div>
+
+          <div class="third_info">
+            <h4>contact info</h4>
+            <p> <i class='bx bx-map'></i> Surabaya, Indonesia </p>
+            <p> <i class='bx bx-phone' ></i> +62-856-7890-8619 </p>
+            <p> <i class='bx bxl-gmail' ></i> trovelab@mail.com </p>
+            <p> <i class='bx bx-time-five' ></i></i> 7:00 am - 10:00 pm </p>
+          </div>
+
+          <div class="fourth_info">
+              <h4>Connect with Us</h4>
+              <div class="social-icon">
+                  <i class="ri-instagram-fill"></i>
+                  <i class="ri-twitter-x-fill"></i>
+                  <i class="ri-tiktok-fill"></i>
+                  <i class="ri-facebook-fill"></i>
+              </div>
+          </div>
+      </div>
+
+      <div class="end-text">
+        <p>Copyright @2023 TROVELAB. All Right Reserved by Team 6 RevoU Surabaya.</p>
+      </div>
+    </div>
+    </footer>
+<!--footer end--> 
+    
+    <script src="../frontend/js/script-detail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+
+        AOS.init({
+            duration: 800,
+            offset: 150,
+        });
+
+    </script>
+    <script>
+
+      window.addEventListener('load', () => {
+          // Mengambil nilai productId dari parameter URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const productId = urlParams.get('productId');
+      // Menambahkan event listener pada tombol "Buy"
+      const product = document.getElementById('product');
+      if (product) {
+          product.addEventListener('click', () => {
+              buyAndDelete(productId);
+          });
+    }
+        
+      });
+
+      async function buyAndDelete(productId) {
+        console.log('productId:', productId);
+        try {
+            const response = await fetch(`http://localhost:3000/product/delete/${productId}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                const idproduk = document.querySelector(`[data-id="${productId}"]`);
+                if (idproduk) {
+                    idproduk.remove();
+                    console.log(`Product with ID ${productId} successfully deleted from the DOM.`);
+                    alert("Barang sudah di pesan")
+                    window.location.href = `./invoice.html`;
+                } else {
+                    console.error('Error: Product element not found in the DOM after deletion.', productId);
+                }
+            } else {
+                console.error(`Error: Deleting product with ID ${productId} failed. Status: ${response.status}, ${response.statusText}`);
+            }
+        } catch (error) {
+            console.error('Error: An unexpected error occurred during the deletion process.', error);
+        }
+      }
+
+    </script>
+</body>
+</html>
