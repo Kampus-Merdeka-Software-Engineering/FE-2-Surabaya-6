@@ -109,8 +109,8 @@ body{
 
 .navigation .search-bar{
     position: absolute;
-    top: 45%; left: 17%;
-    width: 60rem;
+    top: 45%; left: 13%;
+    width: 40rem;
     height: 4rem;
     background: #ffffff;
     border-radius: 0.5rem;
@@ -165,372 +165,6 @@ body{
     font-size: 5rem;
     color: #ffffff;
 }
-/*banner css end*/
-
-
-/*recomendation css start*/
-.section_recomendation {
-    margin-top: 4rem;
-    color: var(--teal);
-    font-size: 20px;
-    text-transform: capitalize;
-    text-align: center;
-}
-
-.place {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
-    gap: 2rem;
-}
-
-.row {
-    position: relative;
-    transition: all .40s;
-}
-
-.row img {
-    width: 100%;
-    height: auto;
-    transition: all .40s;
-}
-
-.place_text h2 {
-    font-size: 18px;
-}
-
-.heart_icon {
-    position: absolute;
-    right: 0;
-    font-size: 20px;
-
-}
-
-.heart_icon:hover {
-    color: red;
-}
-
-.place_ratings {
-    color: goldenrod;
-    font-size: 18px;
-}
-
-.place_details h4 {
-    color: black;
-    font-size: 16px;
-    text-transform: capitalize;
-    font-weight: 400;
-}
-
-.place_details p {
-    color: #151515;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.more-btn {
-    right: .1rem;
-    display: flex;
-    position: absolute;
-    color: black;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: capitalize;
-    padding: 12px 25px;
-}
-
-.more-btn:hover {
-    text-decoration: underline;
-    color: rgb(222, 222, 222);
-}
-
-.other-places-btn {
-    color: var(--teal);
-    position: absolute;
-    padding-top: 6rem;
-    margin-top: 6rem;
-    right: 46%;
-    text-align: center;
-    font-size: 18px;
-    text-transform: lowercase;
-    border: 2px solid var(--teal);
-    padding: 11px 25px;
-    transition: all .42s ease;
-    border-radius: 3rem;
-}
-
-.other-places-btn:hover {
-    background-color: var(--teal);
-    color: white;
-}
-/*recomendation css end*/
-
-
-/*package css start*/
-.section_package {
-    padding-top: 8rem;
-    margin-top: 6rem;
-    color: var(--teal);
-    font-size: 20px;
-    text-transform: capitalize;
-    text-align: center;
-}
-
-.package_grid {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
-    gap: 2rem;
-}
-
-.package_card {
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, .1);
-    transition: 0.3s;
-}
-
-.package_card img {
-    width: 100%;
-    height: auto;
-    transition: all .40s;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-}
-
-.package_card p {
-    font-size: .9rem;
-    color: #4e4e4e;
-}
-
-.package_card h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #04364a;
-}
-
-.package_details {
-    padding-block: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.package_details p {
-    font-weight: 500;
-    color: #04364a;
-}
-
-.package_details h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #04364a;
-}
-
-.package_ratings span {
-    font-size: .9rem;
-    color: goldenrod;
-}
-
-.package_ratings p {
-    text-align: right;
-}
-
-.package_card h5 {
-    margin-bottom: .5rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #04364a;
-}
-
-.package_card h5 span{
-    font-size: 1.2rem;
-    color: brown;
-}
-
-.package_card p span {
-    font-size: 1.2rem;
-    color: brown;
-}
-
-.package_card:hover {
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
-}
-
-.other-packages-btn {
-    color: var(--teal);
-    position: absolute;
-    padding-top: 3rem;
-    margin-top: 2rem;
-    left: 43%;
-    text-align: center;
-    font-size: 18px;
-    text-transform: lowercase;
-    border: 2px solid var(--teal);
-    padding: 11px 25px;
-    transition: all .42s ease;
-    border-radius: 3rem;
-}
-
-.other-packages-btn:hover {
-    background-color: var(--teal);
-    color: white;
-}
-/*package css end*/
-
-
-/*about css start*/
-.section_about {
-    padding-top: 6rem;
-    margin-top: 6rem;
-    color: var(--teal);
-    font-size: 20px;
-    text-transform: capitalize;
-    text-align: center;
-}
-
-.about_grid {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(260px, auto));
-    gap: 4rem;
-    padding: 3rem;
-}
-
-.about_card {
-    background: #fff;
-    border-radius: 1rem;
-    padding: 3rem;
-    text-align: center;
-    box-shadow: rgb(17 17 17 / 15%) 0px 0.5rem 1rem;
-}
-
-.about_card .bx{
-
-    transition: all 0.40s;
-    font-size: 10rem;
-    text-align: center;
-    justify-content: center;
-    color: var(--teal);
-    margin-bottom: 3rem;
-
-}
-
-.about_card h2 {
-    font-size: 18px;
-    text-align: center;
-
-}
-
-.about_card p {
-    font-size: 16px;
-}
-/*about css end*/
-
-
-/*contact css start*/
-.contact {
-    margin: 3rem;
-    margin-bottom: 0;
-}
-.contact .end-text{
-    padding-bottom: 0;
-}
-.contact_info {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(160px, auto));
-    gap: 3rem;
-}
-
-.contact_info h4 {
-    color: var(--navy);
-    font-size: 20px;
-    text-transform: capitalize;
-    margin-bottom: 7px;
-    margin-top: 7px;
-    margin: 3rem;
-}
-
-.contact_info p {
-    color: #848484;
-    font-size: 15px;
-    font-weight: 400;
-    text-transform: lowercase;
-    margin-bottom: 10px;
-    cursor: pointer;
-    margin-left: 3rem;
-}
-.contact_info a{
-    display: block;
-    font-size: 15px;
-    color: #848484;
-}
-.second_info a:hover {
-    color: var(--teal);
-}
-.third_info p:hover {
-    color: var(--teal);
-}
-.second_info i{                                                     
-    font-size: 20px;
-    color: var(--teal);
-    padding-right: 1rem;
-}
-.third_info i{
-    font-size: 20px;
-    color: var(--teal);
-}
-.fourth_info .social-icon{
-    padding-top: 1rem;
-}
-.fourth_info .social-icon i {
-  line-height: 4rem;
-  font-size: 5rem;
-  border-radius: 50%;
-  border: 0.2rem solid var(--teal);
-  color: var(--teal);
-  margin-right: .5rem;
-  text-align: center;
-  padding: 1rem;
-}
-.fourth_info .social-icon i:hover{
-    background: var(--teal);
-    color: #f8f9fc;
-}
-/*contact css end*/
-
-.end-text {
-    text-align: justify;
-    padding: 20px;
-    font-size: 10px;
-    color: white;
-}
-
-@media screen and (max-width: 990px){
-    html{
-        font-size: 55%;
-    }
-    
-    .navigation {
-        padding: 2rem;
-    }
-
-    .navigation .menu-bar {
-        display: block;
-        font-size: 3rem;
-        align-items: center;
-        padding-top: 2.2rem;
-    }
-
-    .navigation .search-bar {
-        display: none;
-    }
-    
-    .navigation .menu-navigation {
-        display: none;
-    }
-}
 
 .image-home img{
     width: 100%;
@@ -562,6 +196,34 @@ body{
     font-size: 2rem;
     color: var(--navy);
 }
+/*banner css end*/
+
+@media screen and (max-width: 990px){
+    html{
+        font-size: 55%;
+    }
+    
+    .navigation {
+        padding: 2rem;
+    }
+
+    .navigation .menu-bar {
+        display: block;
+        font-size: 3rem;
+        align-items: center;
+        padding-top: 2.2rem;
+    }
+
+    .navigation .search-bar {
+        display: none;
+    }
+    
+    .navigation .menu-navigation {
+        display: none;
+    }
+}
+
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -728,13 +390,6 @@ p {
     font-size: 20px;
 }
 
-.bx-location-plus{
-    font-size: 2rem;
-    color:var(--text-light);
-    display: flex;
-    margin: 0;
-    height: 2rem;
-}
 
 .btn-book-container h2{
     font-size: 2rem;
@@ -810,6 +465,7 @@ p {
     font-weight: bold;
 }
 
+/*best seller*/
 .popular { 
     padding: 4rem 4rem;
     margin: 0rem;
@@ -850,7 +506,7 @@ p {
     font-size: 2rem;
 }
 .popular-card .card-rating {
-  background: var(--lightblue);
+  background: #ff5361;
   color: var(--white);
   position: absolute;
   top: 0;
@@ -925,7 +581,7 @@ p {
   
 .newsletter .row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
     gap: 5rem;
     height: 100%;
@@ -943,10 +599,10 @@ p {
     font-size: 3rem;
     margin: 2rem;
   }
-  
+
 .newsletter .form div {
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   
@@ -992,6 +648,75 @@ p {
     }
   }
 
+/*recomendation css start*/
+  .section_recomendation {
+    margin-top: 4rem;
+    color: var(--teal);
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.place {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+}
+
+.recomendation__grid .row {
+    position: relative;
+    transition: all .40s;
+    background: #ffffff;
+    padding: .5rem;
+    box-shadow: rgb(17 17 17 / 15%) 0px 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.recomendation__grid .row img {
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+    border-radius: 1rem;
+}
+
+.place_text h2 {
+    font-size: 18px;
+}
+
+.heart_icon {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+
+}
+
+.heart_icon:hover {
+    color: red;
+}
+
+.place_ratings {
+    color: goldenrod;
+    font-size: 18px;
+}
+
+.place_details h4 {
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.place_details p {
+    color: #151515;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+/*recomendation css end*/
+
+
+/*review css start*/
 .review {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1003,6 +728,7 @@ p {
   flex-wrap: wrap;
   gap: 4rem;
   padding: 5rem;
+  background: white;
 }
 
 .review .content {
@@ -1086,6 +812,10 @@ p {
   color: #3d3d3d;
   font-size: 1.5rem;
 }
+/*review css end*/
+
+
+/*logres css start*/
 .container-logres{
     background-color: #fff;
     border-radius: 30px;
@@ -1353,6 +1083,7 @@ p {
 .filter-btn:hover::after{
     width: 100%;
 }
+
 /* active button */
 .active-btn{
     color: #555;
@@ -1360,7 +1091,7 @@ p {
 .active-btn::after{
     width: 100%;
 }
-/*  */
+/* active button */
 
 
 .item-img{
@@ -1614,3 +1345,122 @@ p {
     margin-right: 15px;
     cursor: pointer;
 }
+
+/*about css start*/
+.section_about {
+    padding-top: 6rem;
+    margin-top: 6rem;
+    color: var(--teal);
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.about_grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, auto));
+    gap: 4rem;
+    padding: 3rem;
+}
+
+.about_card {
+    padding: 3rem;
+    text-align: center;
+}
+
+.about_card .bx{
+
+    transition: all 0.40s;
+    font-size: 10rem;
+    text-align: center;
+    justify-content: center;
+    color: var(--teal);
+    margin-bottom: 3rem;
+
+}
+
+.about_card h2 {
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.about_card p {
+    font-size: 16px;
+}
+/*about css end*/
+
+
+/*footer css start*/
+.contact {
+    margin: 3rem;
+    margin-bottom: 0;
+}
+.contact .end-text{
+    padding-bottom: 0;
+}
+.contact_info {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(160px, auto));
+    gap: 3rem;
+}
+
+.contact_info h4 {
+    color: var(--navy);
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin: 3rem;
+}
+
+.contact_info p {
+    color: #848484;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-left: 3rem;
+}
+.contact_info a{
+    display: block;
+    font-size: 15px;
+    color: #848484;
+}
+.second_info a:hover {
+    color: var(--teal);
+    text-decoration: underline;
+}
+.third_info p:hover {
+    color: var(--teal);
+}
+.second_info i{                                                     
+    font-size: 20px;
+    color: var(--teal);
+    padding-right: 1rem;
+}
+.third_info i{
+    font-size: 20px;
+    color: var(--teal);
+}
+
+.fourth_info .social-icon i {
+    font-size: 3rem;
+    color: #848484;
+    margin-right: .5rem;
+    text-align: center;
+    padding: 1rem;
+}
+.fourth_info .social-icon i:hover{
+    color: var(--teal);
+}
+
+.end-text p {
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    color: var(--teal);
+}
+/*footer css end*/
