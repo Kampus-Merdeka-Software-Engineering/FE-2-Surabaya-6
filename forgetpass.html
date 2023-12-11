@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <title>Login Page | Trovelab</title>
+
+</head>
+
+<body>
+    <div class="container-logres" id="container-logres">
+        <div class="form-container sign-in">
+            <form id="forgotPassForm" action="http://localhost:3000/api/logres/submit" method="PUT">
+                <h1>Forgot Password</h1>
+                <div class="social-icons">
+                </div>
+                <span>Enter your email and new password</span>
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="newPassword" placeholder="New Password">
+                <input type="password" id="confirmNewPassword" placeholder="Confirm New Password">
+                <button id="resetPasswordBtn">Reset Password</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello!</h1>
+                    <p>Register with your personal details to use all of site Trovelab features</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+document.getElementById('forgotPassForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const newPassword = document.getElementById('newPassword').value;
+    const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+
+    if (newPassword !== confirmNewPassword) {
+        alert('Password and Confirm Password do not match.');
+        return;
+    }
+
+    try {
+        const response = await fetch('http://localhost:3000/api/logres/submit', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, newPassword }),
+        });
+
+        if (response.ok) {
+            alert('Password reset successfully. You can now login with your new password.');
+            window.location.href = './logres.html';
+        } else {
+            const data = await response.json();
+            alert('Error: ' + data.message);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+
+    document.getElementById('email').value = '';
+    document.getElementById('newPassword').value = '';
+    document.getElementById('confirmNewPassword').value = '';
+});
+</script>
+    
+</html>

@@ -12,7 +12,7 @@
 <body>
     <div class="container-logres" id="container-logres">
         <div class="form-container sign-up">
-            <form>
+            <form id="signupForm" action="http://localhost:3000/api/logres/submit" method="POST">
                 <h1>Create Account</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -20,14 +20,14 @@
                     <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <button id="signupbtn">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form id="signInForm" action="http://localhost:3000/api/logres/login" method="POST">
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -35,10 +35,10 @@
                     <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
                 </div>
                 <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
-                <button>Sign In</button>
+                <input type="email" id="emailLogin" placeholder="Email">
+                <input type="password" id="passwordLogin" placeholder="Password">
+                <a href="./forgetpass.html">Forget Your Password?</a>
+                <button id="signinbtn">Sign In</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -58,5 +58,90 @@
     </div>
 
 </body>
-    <script src="/js/script-logres.js"></script>
+    <script src="../frontend/js/script-logres.js"></script>
+    <script>
+        const signupForm = document.getElementById('signupForm');
+
+        signupForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+    
+            try {
+                const response = await fetch('http://localhost:3000/api/logres/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email, password }),
+                });
+
+                if (response.ok) {
+                    // Autentikasi berhasil
+                    alert('Berhasil Membuat Akun!');
+                    // Redirect atau navigasi ke halaman utama
+                    window.location.href = './index.html';
+                } else {
+                    const data = await response.json();
+
+                    // Periksa apakah email telah digunakan
+                    if (data && data.message && data.message.includes("email already exists")) {
+                        alert('Email telah digunakan. Gunakan email lain.');
+                    } else {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+
+            document.getElementById('email').value;
+            document.getElementById('password').value;
+        });
+
+        const signInForm = document.getElementById('signInForm');
+        signInForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById('emailLogin').value;
+            const password = document.getElementById('passwordLogin').value;
+
+            try {
+                // Kirim permintaan login ke backend
+                const response = await fetch('http://localhost:3000/api/logres/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                // Periksa apakah permintaan berhasil (kode respons 200)
+                if (response.ok) {
+                    // Ambil data respons dari backend
+                    const data = await response.json();
+                    
+                    // Tampilkan pesan sukses atau lakukan aksi yang diperlukan
+                    alert('Berhasil Login!');
+                    // Redirect atau navigasi ke halaman utama
+                    window.location.href = './index.html';
+                } else if (response.status === 401) {
+                    // Status 401 (Unauthorized)
+                    const errorData = await response.json();
+                    alert('Email atau password salah. Silakan coba lagi.');
+                } else {
+                    // Tampilkan pesan kesalahan dari backend
+                    const errorData = await response.json();
+                    alert('Kesalahan Server: ' + errorData.message);
+                }
+            } catch (error) {
+                // Tangani kesalahan umum
+                console.error('Error:', error);
+                alert('Terjadi kesalahan. Silakan coba lagi.');
+            }
+        });
+    </script>
+    
 </html>
